@@ -238,9 +238,6 @@
                     <label for="f-name">your name</label>
                     <input type="text" id="f-name" name="name" required>
 
-                    <label for="f-email">email</label>
-                    <input type="email" id="f-email" name="email" required>
-
                     <label for="f-phone">phone (optional)</label>
                     <input type="tel" id="f-phone" name="phone">
 
@@ -288,7 +285,7 @@
         <script>
             (function () {
                 // === CONFIG: change this to your real email ===
-                var BUSINESS_EMAIL = 'clairediede@gmail.com';
+                var BUSINESS_EMAIL = 'bookings@filmbyclairejo.com';
 
                 var dateInput = document.getElementById('f-date');
                 var form      = document.getElementById('inquiryForm');
@@ -305,15 +302,14 @@
 
                     var dateVal  = dateInput.value;
                     var name     = document.getElementById('f-name').value.trim();
-                    var email    = document.getElementById('f-email').value.trim();
                     var phone    = document.getElementById('f-phone').value.trim();
                     var addonNodes = document.querySelectorAll('#f-addons input[type="checkbox"]:checked');
                     var addons = Array.prototype.map.call(addonNodes, function (n) { return n.value; });
                     var location = document.getElementById('f-location').value.trim();
                     var message  = document.getElementById('f-message').value.trim();
 
-                    if (!dateVal || !name || !email) {
-                        alert('please fill in the date, your name, and email.');
+                    if (!dateVal || !name) {
+                        alert('please fill in the date and your name.');
                         return;
                     }
 
@@ -331,7 +327,6 @@
                         'Requested date: ' + pretty + '\n' +
                         'Add-ons: ' + (addons.length ? addons.join(', ') : '(none selected)') + '\n\n' +
                         'Name: ' + name + '\n' +
-                        'Email: ' + email + '\n' +
                         'Phone: ' + (phone || '(not provided)') + '\n' +
                         'Location: ' + (location || '(not provided)') + '\n\n' +
                         'Message:\n' + (message || '(none)') + '\n';
