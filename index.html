@@ -141,6 +141,42 @@
                 accent-color: #492a0a;
                 cursor: pointer;
             }
+
+            /* ===== Top photo gallery ===== */
+            .booth-gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1.2rem;
+                max-width: 90rem;
+                margin: 2.5rem auto 3rem;
+                padding: 0;
+                text-align: center;
+            }
+
+            .booth-gallery img {
+                flex: 0 1 20rem;
+                width: 20rem;
+                height: 20rem;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+                display: block;
+                margin: 0 !important;
+                border: 1px solid #ddd;
+                background: #fafafa;
+            }
+
+            @media (max-width: 700px) {
+                .booth-gallery {
+                    gap: .8rem;
+                }
+                .booth-gallery img {
+                    flex: 0 1 14rem;
+                    width: 14rem;
+                    height: 14rem;
+                }
+            }
         </style>
 
 
@@ -177,10 +213,19 @@
                 <a href="/" class="logo-link">
                     <img src="assets/img/logo.png" class="img-responsive booth-logo" alt="boothbyclairejo logo">
                 </a>
+                <!-- BOOTH GALLERY -->
+                <div class="booth-gallery">
+                    <img src="assets/img/booth1.png" alt="boothbyclairejo photo booth 1">
+                    <img src="assets/img/booth2.png" alt="boothbyclairejo photo booth 2">
+                    <img src="assets/img/booth3.png" alt="boothbyclairejo photo booth 3">
+                </div>
                 <p class="lede">a vintage-inspired photo booth experience for your most memorable events
                     <br>step back in time with our enclosed, vintage-style photo booth, designed to evoke a classic analog feel - but with modern digital operation. guests will select between color or black &amp; white, and all photo strips are instantly digitized for sharing. whether it's a wedding, birthday, or corporate gathering, we create timeless memories with every snapshot
                     <br>bringing you a touch of nostalgia to every event
                 </p>
+
+
+                <!-- /BOOTH GALLERY -->
 
 
                 <!-- PACKAGES -->
